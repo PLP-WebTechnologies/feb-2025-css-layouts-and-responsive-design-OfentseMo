@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Global Styling */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar nav ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Content Layout with Flexbox */
+  .content {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap; /* Allows items to wrap */
+    gap: 20px; /* Space between elements */
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    flex: 1 1 200px; /* Sidebar takes at least 200px and can grow */
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Main Content Section */
+  .main {
+    flex: 3 1 600px; /* Main content takes up more space */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design using Media Queries */
+  
+  /* Tablet Layout */
+  @media (max-width: 768px) {
+    .navbar nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      flex: 1 1 100%;
+    }
+  
+    .main {
+      flex: 1 1 100%;
+    }
+  }
+  
+  /* Mobile Layout */
+  @media (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar .logo {
+      margin-bottom: 10px;
+    }
+  
+    .navbar nav ul {
+      padding: 0;
+    }
+  
+    .navbar nav ul li {
+      margin: 5px 0;
+    }
+  
+    .content {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .sidebar, .main {
+      flex: 1 1 100%;
+    }
+  
+    .footer {
+      font-size: 0.8rem;
+    }
+  }
+  
